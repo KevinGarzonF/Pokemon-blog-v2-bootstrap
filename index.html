@@ -9,9 +9,10 @@
     <script src="app.js" defer></script>
     <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"        
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,65 +28,73 @@
         </nav>
     </header>
     <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Bienvenido a nuestro blog de Pokémon, donde podrás encontrar información sobre los distintos tipos de
-                Pokémon y sus características.</p>
-            <h2 class="bienvenida">Bienvenido entrenador al inicio </h2>
-            <p>Este es mi blog sobre Pokémon, acontinuacion veras los distintos tipos de Pokemon.</p>
-            <div class="tipos" onclick="abrirModal(`fuego`)">
-                <h3>🔥 Tipo Fuego <h3 />
-            </div>
-            <div class="tipos" onclick="abrirModal(`agua`)">
-                <h3>💧 Tipo Agua</h3>
-            </div>
-            <div class="tipos" onclick="abrirModal(`acero`)" >
-                <h3>⚙️ Tipo Acero</h3>
-            </div>
-            <div class="tipos">
-                <h3>🌿 Tipo Planta</h3>
-            </div>
-            <div class="tipos">
-                <h3>⚡ Tipo Eléctrico</h3>
-            </div>
-            <div class="tipos">
-                <h3>❄️ Tipo Hielo</h3>
-            </div>
-            <div class="tipos">
-                <h3>🥊 Tipo Lucha</h3>
-            </div>
-            <div class="tipos">
-                <h3>☠️ Tipo Veneno</h3>
-            </div>
-            <div class="tipos">
-                <h3>🌍 Tipo Tierra</h3>
-            </div>
-            <div class="tipos">
-                <h3>🐦 Tipo Volador</h3>
-            </div>
-            <div class="tipos">
-                <h3>🧠 Tipo Psíquico</h3>
-            </div>
-            <div class="tipos">
-                <h3>🐛 Tipo Bicho</h3>
-            </div>
-            <div class="tipos">
-                <h3>🗿 Tipo Roca</h3>
-            </div>
-            <div class="tipos">
-                <h3>👻 Tipo Fantasma</h3>
-            </div>
-            <div class="tipos">
-                <h3>🐉 Tipo Dragón</h3>
-            </div>
-            <div class="tipos">
-                <h3>🌑 Tipo Siniestro</h3>
-            </div>
-            <div class="tipos">
-                <h3>🧚 Tipo Hada</h3>
-            </div>
-            <div class="tipos">
-                <h3>✨ Tipo Normal</h3>
+        <section id="inicio" class="mb-5">
+            <h2 class="text-center mb-3">Inicio</h2>
+            <p class="text-center text-muted mb-4">
+                Bienvenido a nuestro blog de Pokémon, donde podrás encontrar información sobre los distintos tipos.
+            </p>
+
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+                <div class="col">
+                    <button class="tipo-btn tipo-fuego w-100 py-3" onclick="abrirModal('fuego')">
+                        🔥 Tipo Fuego
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-agua w-100 py-3" onclick="abrirModal('agua')">
+                        💧 Tipo Agua
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-acero w-100 py-3" onclick="abrirModal('acero')">
+                        ⚙️ Tipo Acero
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-planta w-100 py-3">🌿 Tipo Planta</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-electrico w-100 py-3">⚡ Tipo Eléctrico</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-hielo w-100 py-3">❄️ Tipo Hielo</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-lucha w-100 py-3">🥊 Tipo Lucha</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-veneno w-100 py-3">☠️ Tipo Veneno</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-tierra w-100 py-3">🌍 Tipo Tierra</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-volador w-100 py-3">🐦 Tipo Volador</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-psiquico w-100 py-3">🧠 Tipo Psíquico</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-bicho w-100 py-3">🐛 Tipo Bicho</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-roca w-100 py-3">🗿 Tipo Roca</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-fantasma w-100 py-3">👻 Tipo Fantasma</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-dragon w-100 py-3">🐉 Tipo Dragón</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-siniestro w-100 py-3">🌑 Tipo Siniestro</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-hada w-100 py-3">🧚 Tipo Hada</button>
+                </div>
+                <div class="col">
+                    <button class="tipo-btn tipo-normal w-100 py-3">✨ Tipo Normal</button>
+                </div>
             </div>
         </section>
 
@@ -257,5 +266,5 @@
             </div>
         </div>
     </div>
-    
+
 </body>
