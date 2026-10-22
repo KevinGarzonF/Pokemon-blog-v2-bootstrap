@@ -146,24 +146,48 @@
             </section>
         </div>
 
-        <section id="contacto" class="seccion">
-            <h2>Contacto</h2>
-            <p>¿Quieres escribirnos? Llena el formulario:</p>
+              <section id="contacto" class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-7">
+                    <div class="card shadow border-0 border-top border-danger border-4 rounded-3">
+                        <div class="card-body p-4">
+                            <h2 class="text-center text-danger fw-bold mb-2">
+                                <i class="bi bi-envelope-paper-fill me-2"></i>Contacto
+                            </h2>
+                            <p class="text-center text-secondary mb-4">¿Quieres escribirnos? Llena el formulario:</p>
 
-            <form id="formulario">
-                <label>Nombre:</label>
-                <input type="text" id="nombre" placeholder="Tu nombre">
+                            <form id="formulario">
+                                <div class="mb-3 text-start">
+                                    <label for="nombre" class="form-label fw-semibold">
+                                        <i class="bi bi-person-fill text-danger me-1"></i>Nombre:
+                                    </label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                                </div>
 
-                <label>Correo:</label>
-                <input type="email" id="correo" placeholder="tu correo">
+                                <div class="mb-3 text-start">
+                                    <label for="correo" class="form-label fw-semibold">
+                                        <i class="bi bi-envelope-fill text-danger me-1"></i>Correo:
+                                    </label>
+                                    <input type="email" class="form-control" id="correo" placeholder="tu correo" required>
+                                </div>
 
-                <label>Mensaje:</label>
-                <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                                <div class="mb-3 text-start">
+                                    <label for="mensaje" class="form-label fw-semibold">
+                                        <i class="bi bi-chat-dots-fill text-danger me-1"></i>Mensaje:
+                                    </label>
+                                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                                </div>
 
-                <button type="submit">Enviar</button>
-            </form>
+                                <button type="submit" class="btn btn-danger w-100 fw-bold py-2 mt-2">
+                                    <i class="bi bi-send-fill me-2"></i>Enviar
+                                </button>
+                            </form>
 
-            <p id="respuesta"></p>
+                            <p id="respuesta" class="mt-3 text-center fw-semibold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
