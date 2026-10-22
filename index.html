@@ -7,6 +7,7 @@
     <title>Pokemaniacos Blog</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
+    <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
@@ -29,11 +30,14 @@
                 Pokémon y sus características.</p>
             <h2 class="bienvenida">Bienvenido entrenador al inicio </h2>
             <p>Este es mi blog sobre Pokémon, acontinuacion veras los distintos tipos de Pokemon.</p>
-            <div class="tipos">
-                <h3>🔥 Tipo Fuego</h3>
+            <div class="tipos" onclick="abrirModal(`fuego`)">
+                <h3>🔥 Tipo Fuego <h3 />
             </div>
-            <div class="tipos">
+            <div class="tipos" onclick="abrirModal(`agua`)">
                 <h3>💧 Tipo Agua</h3>
+            </div>
+            <div class="tipos" onclick="abrirModal(`acero`)" >
+                <h3>⚙️ Tipo Acero</h3>
             </div>
             <div class="tipos">
                 <h3>🌿 Tipo Planta</h3>
@@ -75,9 +79,6 @@
                 <h3>🌑 Tipo Siniestro</h3>
             </div>
             <div class="tipos">
-                <h3>⚙️ Tipo Acero</h3>
-            </div>
-            <div class="tipos">
                 <h3>🧚 Tipo Hada</h3>
             </div>
             <div class="tipos">
@@ -85,25 +86,6 @@
             </div>
         </section>
 
-        <section id="contacto" class="seccion">
-            <h2>Contacto</h2>
-            <p>¿Quieres escribirnos? Llena el formulario:</p>
-
-            <form id="formulario">
-                <label>Nombre:</label>
-                <input type="text" id="nombre" placeholder="Tu nombre">
-
-                <label>Correo:</label>
-                <input type="email" id="correo" placeholder="tu correo">
-
-                <label>Mensaje:</label>
-                <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-
-            <p id="respuesta"></p>
-        </section>
         <div class="container main-somos">
             <section class="seccion introduccion-somos">
                 <div class="texto-somos">
@@ -160,6 +142,26 @@
                 <a class="boton-somos" href="index.html">Acceso al blog</a>
             </section>
         </div>
+
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <p>¿Quieres escribirnos? Llena el formulario:</p>
+
+            <form id="formulario">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre">
+
+                <label>Correo:</label>
+                <input type="email" id="correo" placeholder="tu correo">
+
+                <label>Mensaje:</label>
+                <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="respuesta"></p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 Pokemaniacos Blog. Todos los derechos reservados.</p>
@@ -170,4 +172,87 @@
             * Nicolas David Peñuela Arango</p>
         <p>POKEMANIACOS@hotmail.com</p>
     </footer>
+
+
+    <!--ventanas Modal-->
+    <div id="modal-fuego" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('fuego')">X</span>
+
+            <div class="tarjeta-pokemon">
+
+                <div class="columna-izquierda">
+                    <h1>Charizard</h1>
+                    <img src="https://i.pinimg.com/736x/4c/77/c1/4c77c19f87a39ec6db50269348b0e7ee.jpg"
+                        alt="Imagen de Charizard">
+                    <h2>Tipos: Fuego/Volador</h2>
+                </div>
+
+                <div class="columna-derecha">
+                    <h3>Estadísticas Base</h3>
+                    <ul>
+                        <li><strong>HP:</strong> 78</li>
+                        <li><strong>Ataque:</strong> 84</li>
+                        <li><strong>Defensa:</strong> 78</li>
+                        <li><strong>Velocidad:</strong> 100</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-agua" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('agua')">X</span>
+
+            <div class="tarjeta-pokemon">
+
+                <div class="columna-izquierda">
+                    <h1>Blastoise</h1>
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b1de3196-e7a2-4e9f-b1e6-1e988a572586/dm422ei-8ae74c91-7420-406e-aaea-0695fbffc0c3.jpg/v1/fill/w_1920,h_2716,q_75,strp/blastoise_unleashed_by_ayartps_dm422ei-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9iMWRlMzE5Ni1lN2EyLTRlOWYtYjFlNi0xZTk4OGE1NzI1ODYvZG00MjJlaS04YWU3NGM5MS03NDIwLTQwNmUtYWFlYS0wNjk1ZmJmZmMwYzMuanBnIiwiaGVpZ2h0IjoiPD0yNzE2Iiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiL3dtL2IxZGUzMTk2LWU3YTItNGU5Zi1iMWU2LTFlOTg4YTU3MjU4Ni9heWFydHBzLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.5NQ_5gA0BpfJjS9_Bv3_l1EIk15KvIVinKeSR2YI5LU"
+                        alt="Imagen de Charizard">
+                    <h2>Tipos: Agua</h2>
+                </div>
+
+                <div class="columna-derecha">
+                    <h3>Estadísticas Base</h3>
+                    <ul>
+                        <li><strong>HP:</strong> 80</li>
+                        <li><strong>Ataque:</strong> 68</li>
+                        <li><strong>Defensa:</strong> 80</li>
+                        <li><strong>Velocidad:</strong> 50</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal-acero" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('acero')">X</span>
+
+            <div class="tarjeta-pokemon">
+
+                <div class="columna-izquierda">
+                    <h1>Lucario</h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqyKNdyAULdFw5f-usFl5zB3NuWldhGOwu5iz0gHv0qA8eL0j0TJNQndLv&s=10"
+                        alt="Imagen de Charizard">
+                    <h2>Tipos: Acero</h2>
+                </div>
+
+                <div class="columna-derecha">
+                    <h3>Estadísticas Base</h3>
+                    <ul>
+                        <li><strong>HP:</strong> 80</li>
+                        <li><strong>Ataque:</strong> 98</li>
+                        <li><strong>Defensa:</strong> 80</li>
+                        <li><strong>Velocidad:</strong> 90</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
 </body>
