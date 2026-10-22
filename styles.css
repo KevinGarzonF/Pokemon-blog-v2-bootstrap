@@ -24,12 +24,17 @@ body {
 /* Header y Menú */
 header {
     position: sticky;
+    z-index: 1020;
     top: 0;
     background-color: var(--rojo-pokemon);
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+section {
+    scroll-margin-top: 85px;
 }
 
 header h1 {
@@ -260,80 +265,6 @@ footer p {
   border-bottom: 1px solid #eee;
 }
 
-/*FORMULARIO DE CONTACTO*/
-
-#contacto {
-    text-align: center;
-    margin-top: 40px;
-}
-
-#contacto h2 {
-    color: var(--rojo-pokemon);
-}
-
-#formulario {
-    background-color: var(--blanco);
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-top: 5px solid var(--rojo-pokemon);
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-#formulario label {
-    font-weight: 600;
-    color: var(--texto);
-    margin-top: 12px;
-    margin-bottom: 5px;
-    font-size: 0.95rem;
-}
-
-#formulario input,
-#formulario textarea {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1px solid #dcdcdc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-/* Efecto al hacer clic en las casillas */
-#formulario input:focus,
-#formulario textarea:focus {
-    outline: none;
-    border-color: var(--azul-pokemon);
-    box-shadow: 0 0 0 3px rgba(42, 117, 187, 0.2);
-}
-
-#formulario textarea {
-    resize: vertical;
-    min-height: 110px;
-}
-
-/* Botón de Enviar */
-#formulario button {
-    background-color: var(--rojo-pokemon);
-    color: var(--blanco);
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-#formulario button:hover {
-    background-color: #b00824;
-    transform: translateY(-2px);
-}
 .tipo-fuego     { background:#F08030 }
 .tipo-agua      { background:#6890F0}
 .tipo-acero     { background:#B8B8D0}
