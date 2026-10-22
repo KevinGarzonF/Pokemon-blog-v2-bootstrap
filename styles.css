@@ -13,6 +13,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
     font-family: var(--fuente);
@@ -27,21 +28,27 @@ header {
     z-index: 1020;
     top: 0;
     background-color: var(--rojo-pokemon);
-    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--rojo-pokemon); 
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand img {
+  height: 70px; 
+  width: auto;  
 }
 
 section {
     scroll-margin-top: 85px;
 }
 
-header h1 {
-    color: var(--blanco);
-    margin: 0;
-    font-size: 1.5rem;
-}
 
 nav a {
     color: var(--blanco);

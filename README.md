@@ -4,3 +4,4 @@
 * Kevin Duvan Garzon Florez,
 * Nicolas David Peñuela Arango
 
+deploy: https://kevingarzonf.github.io/Pokemon-blog-v2-bootstrap/
